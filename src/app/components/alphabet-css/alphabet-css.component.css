@@ -1,0 +1,128 @@
+.alphabet
+{
+    margin-left: 0;
+    float: left;
+    width: 20%;
+    height: 150px;
+    font-size: 100px;
+    border: 1px solid brown;
+    text-shadow: 2px 2px green;
+}
+.after::after
+{
+    text-shadow: none;
+    font-size: 30px;
+}
+.before::before
+{
+    position: relative;
+    margin-left: -40px;
+    text-shadow: none;
+    bottom: 20%;
+    font-size: 30px;
+}
+.alphabetA::after
+{
+    content: 'APPLE';
+}
+.alphabetB::after
+{
+    content: 'BOY';
+}
+.alphabetC::after
+{
+    content: 'CAT';
+}
+.alphabetD::after
+{
+    content: 'DOG';
+}
+.alphabetE::after
+{
+    content: 'ELEPHANT';
+}
+.alphabetF::after
+{
+    content: 'FOX';
+}
+
+.alphabetG::after
+{
+    content: 'GOAT';
+}
+.alphabetH::after
+{
+    content: 'HOUSE';
+}
+.alphabetI::after
+{
+    content: 'ICE CREAM';
+}
+.alphabetJ::after
+{
+    content: 'JUG';
+}
+.alphabetK::after
+{
+    content: 'KITE';
+}
+.alphabetL::after
+{
+    content: 'LAMP';
+}
+.alphabetM::after
+{
+    content: 'MONKEY';
+}
+.alphabetN::after
+{
+    content: 'NUT';
+}
+.alphabetO::after
+{
+    content: 'OWL';
+}
+.alphabetP::after
+{
+    content: 'PIG';
+}
+.alphabetQ::after
+{
+    content: 'QUEEN';
+}
+.alphabetR::after
+{
+    content: 'RAT';
+}
+.alphabetS::after
+{
+    content: 'SUN';
+}
+.alphabetT::after
+{
+    content: 'TANK';
+}
+.alphabetU::after
+{
+    content: 'UMBRELLA';
+}
+.alphabetV::after
+{
+    content: 'VAN';
+}
+.alphabetW::after
+{
+    content: 'WAGON';
+}
+.alphabetX::after
+{
+    content: 'XYLOPHONE';
+}
+.alphabetY::after
+{
+    content: 'YELLOW';
+}
+.alphabetZ::after
+{
+    content: 'ZEBRA';
+}

@@ -1,0 +1,12 @@
+<div class="container">
+  <a class="material-icons" style="float: right;" [routerLink]='["/managePhrases"]' title="manage motivating phraes">settings</a>
+  <br />
+  <ngb-carousel *ngIf="phrases" [showNavigationArrows]="true" [showNavigationIndicators]="true">
+    <ng-template ngbSlide *ngFor="let p of phrases; let first=first; let idx=index; let last=last;">
+      <div class="text-carousel-item">
+        {{p.text}}
+        <div class="carousel-caption">{{p.caption}}</div>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+</div>

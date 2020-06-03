@@ -1,0 +1,31 @@
+<p>
+  <input type="button" value="mockup phrases" (click)="mockupPhrases()">
+  <input type="button" value="clear phrases" (click)="clearPhrases()">
+</p>
+<div class="container border">
+  <span> some text </span>
+  <app-manage-phrase [cssClass]="{odd: oddIdx, even: evenIdx}" *ngFor="let phrase of phrases; let oddIdx = odd; let evenIdx = even;"
+    [phrase]="phrase"></app-manage-phrase>
+</div>
+
+<br />
+<div class="card container">
+  <div class="card-header">Add a Phrase</div>
+  <div class="card-title">
+    <form [formGroup]="addPhraseForm" (ngSubmit)="addPhrase(addPhraseForm.value)">
+      <div class="form-group">
+        <label>
+          Caption
+          <input class="form-control" formControlName="caption" />
+        </label>
+        <label>
+          Text
+          <input class="form-control" formControlName="text" />
+        </label>
+        <span class="col-sm-1">
+          <button type="submit" class="material-icons" [disabled]="addPhraseForm.invalid">add</button>
+        </span>
+      </div>
+    </form>
+  </div>
+</div>

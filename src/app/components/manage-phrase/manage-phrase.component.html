@@ -1,0 +1,18 @@
+
+
+<div class="card container" [ngClass]="cssClass">
+  <form class="row" [formGroup]="editPhraseForm" onsubmit="updatePhrase()">
+  <div class="form-group">
+    <label class="center-block"> Phrase-Caption
+      <input class="form-control" formControlName="caption" />
+    </label>
+    <label class="center-block"> Phrase-Text
+      <input class="form-control" formControlName="text" />
+    </label>
+  </div>
+  <div>
+    <button class="material-icons" (click)="openConfirmationDialog(phrase)">delete</button>
+    <button class="material-icons" (click)="updatePhrase(editPhraseForm.value)">save</button>
+  </div>
+</form>
+</div>

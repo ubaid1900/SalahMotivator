@@ -1,0 +1,29 @@
+<div class="col-bg-12 row">
+  <div class="col-sm-3">{{task.name}}</div>
+  <div class="col-sm-2">
+    {{task.startTime}}
+    <app-timer (countdownStatus)="handleCountdownStatus($event)" [until]="task.startTime" cssClass="startTimer" prefix="in "></app-timer>
+  </div>
+  <div class="col-sm-2">{{task.preferredTime}}
+    <app-timer (countdownStatus)="handleCountdownStatus($event)" [until]="task.preferredTime" cssClass="preferredTimer" prefix="in "></app-timer>
+  </div>
+  <div class="col-sm-2">{{task.endTime}}
+    <app-timer (countdownStatus)="handleCountdownStatus($event)" [until]="task.endTime" cssClass="endTimer" prefix="in "></app-timer>
+  </div>
+  <div class="col-sm-2">
+    <input type="checkbox" [checked]="task.done" (change)="mark($event, task);" />
+  </div>
+  <div>
+    <button *ngIf="task.deletable" class="material-icons" (click)="openConfirmationDialog(phrase)">delete</button>
+  </div>
+</div>
+<div>
+  <ngb-carousel *ngIf="task.motivatingPhrases && task.motivatingPhrases.length > 0 && showCarousel" [showNavigationArrows]="true" [showNavigationIndicators]="false">
+    <ng-template ngbSlide *ngFor="let p of task.motivatingPhrases; let first=first; let idx=index; let last=last;">
+      <div class="text-carousel-item">
+        <span *ngIf="p.text">{{p.text}}</span>
+        <div *ngIf="p.caption" class="carousel-caption">{{p.caption}}</div>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+</div>

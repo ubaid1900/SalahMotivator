@@ -1,0 +1,33 @@
+<div class="container">
+  <button (click)="mockupTasks()">Mockup Tasks</button>
+  <button (click)="clearTasks()">Clear Tasks</button>
+  <button (click)="calculatePrayerTimes()">Calculate Prayer Times</button>
+  <div>
+    <div class="well" *ngIf="!allTasks">
+      There are no tasks! Please add a task
+    </div>
+    <button class="material-icons" (click)="openAddTaskModal()" title="add a task">add</button>
+  </div>
+  <div *ngIf="allTasks">
+    <p>
+      <label for="filterString">
+        filter by
+        <input name="filterString" [(ngModel)]="filterString">
+      </label>
+      filtered by: {{filterString}}
+    </p>
+    <div class="container border">
+      <div class="row font-weight-bold header">
+        <div class="col-sm-3">name</div>
+        <div class="col-sm-2">start@</div>
+        <div class="col-sm-2">preferred time</div>
+        <div class="col-sm-2">due by</div>
+        <div class="col-sm-2">done?</div>
+        <div></div>
+      </div>
+      <div [ngClass]="{odd: odd, even:even}" *ngFor="let task of filteredTasks; let odd=odd; let even=even">
+        <app-task (deleted)="refresh()" [task]="task"></app-task>
+      </div>
+    </div>
+  </div>
+</div>

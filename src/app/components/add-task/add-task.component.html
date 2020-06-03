@@ -1,0 +1,30 @@
+<div class="modal-header">
+  <h4 class="modal-title">Add a Task</h4>
+  <button type="button" class="close" aria-label="Close" (click)="dismiss()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <form [formGroup]="addTaskFormGroup" novalidate class="container border">
+      <div class="input-group">
+        <label class="col-sm-2 col-form-label form-control-label" for="nameControl">Name</label>
+        <input class="col-sm-6 form-control" formControlName="nameControl" name="name">
+        <em *ngIf="nameControl.invalid && nameControl.touched" class="text-danger"> *required</em>
+      </div>
+      <div class="input-group">
+        <label class="col-sm-2 col-form-label form-control-label" for="start">Start Time</label>
+        <input class="col-sm-2 form-control" formControlName="startTimeControl" type="time" name="startTime">
+        <em *ngIf="startTimeControl.invalid && nameControl.touched" class="text-danger"> *required</em>
+      </div>
+      <div class="input-group">
+        <label class="col-sm-2 col-form-label form-control-label" for="endTime">End Time</label>
+        <input class="col-sm-2 form-control" formControlName="endTimeControl" type="time" name="endTime">
+        <em *ngIf="startTimeControl.invalid && nameControl.touched" class="text-danger"> *required</em>
+      </div>
+    </form>
+</div>
+<div>addTaskFormGroup{{addTaskFormGroup.valid}}</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-dark" (click)="close('Close click')">Cancel</button>
+  <button type="button" class="btn btn-outline-dark" [disabled]="!addTaskFormGroup.valid" (click)="addTask();close('Saved')">Save</button>
+</div>

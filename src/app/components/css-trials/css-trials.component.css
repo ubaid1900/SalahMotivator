@@ -1,0 +1,121 @@
+.parent 
+{
+    position: relative;
+    height: 50px;
+    overflow: hidden;
+}
+div
+{
+    display: inline-block;
+    margin-bottom: -100px;
+}
+.aDivRed
+{
+    border: 9px solid red;
+    border-radius: 80px;
+}
+.aDivOrange
+{
+    border: 10px solid orange;
+    border-radius: 70px;
+}  
+
+.aDivYellow
+{
+    border: 11px solid yellow;
+    border-radius: 60px;
+}
+
+.aDivGreen
+{
+    border: 12px solid green;
+    border-radius: 50px;
+}
+.aDivBlue
+{
+    border: 13px solid blue;
+    border-radius: 40px;
+}
+
+.aDivIndigo
+{
+    border: 10px solid indigo;
+    border-radius: 3px;
+}
+.aDivViolet
+{
+    border: 10px solid violet;
+    border-radius: 20px;
+    margin-bottom: 0px;
+}
+
+.JustDiv
+{
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    background-image: 
+    linear-gradient(red, orange, lightyellow, lightgreen, lightblue, violet, indigo); 
+    /*linear-gradient(to right,#f2612f 5.3%,transparent 5.3%,transparent 10%,#f2612f 19%,transparent 13%)
+     ,linear-gradient(65deg,transparent 44%,#f2612f 44%,#f2612f 49%,transparent 49%,transparent 53%,#f2612f 53%,#f2612f 56%,transparent 56%)
+    ,linear-gradient(65deg,transparent 74%,#f2612f 74%,#f2612f 79%,transparent 79%,transparent 83%,#f2612f 83%,#f2612f 86%,transparent 86%); */
+}
+
+#css-three {
+    background: #f9dbae;
+}
+.entry {
+    text-align: center;
+    min-height: 400px;
+    position: relative;
+}
+@media (min-width: 960px) {
+.entry {
+    float: left;
+    width: 50%;
+}
+}
+#css-three div {
+    width: 300px;
+    height: 100px;
+    margin-left: -150px;
+    margin-top: -50px;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to right,#f2612f 5.3%,transparent 5.3%,transparent 10%,#f2612f 10%,#f2612f 13%,transparent 13%),linear-gradient(65deg,transparent 44%,#f2612f 44%,#f2612f 49%,transparent 49%,transparent 53%,#f2612f 53%,#f2612f 56%,transparent 56%),linear-gradient(65deg,transparent 74%,#f2612f 74%,#f2612f 79%,transparent 79%,transparent 83%,#f2612f 83%,#f2612f 86%,transparent 86%);
+    background-size: 100% 100%;
+    background-position: 0 0;
+}
+
+.entry div {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+#css-three div:before {
+    width: 310px;
+    height: 216px;
+    left: 50%;
+    top: -58px;
+    margin-left: -155px;
+    background-repeat: repeat-x;
+    background-image: radial-gradient(circle at bottom,#42c3d0 22%,transparent 22%,transparent 45%,#242b33 45%,#242b33 66%,transparent 66%),radial-gradient(circle at top,#42c3d0 22%,transparent 22%,transparent 45%,#242b33 45%,#242b33 66%,transparent 66%);
+    background-size: 33.333% 45px;
+    background-position: 0 0,0 100%;
+}
+
+.entry div:before, .entry div:after {
+    display: block;
+    content: '';
+    position: absolute;
+}
+#css-three div:after {
+    width: 300px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-image: radial-gradient(circle at top,#f2612f 14%,transparent 14%),radial-gradient(circle at top,#f2612f 14%,transparent 14%),radial-gradient(circle at top,#f2612f 14%,transparent 14%),radial-gradient(circle at bottom,#f2612f 14%,transparent 14%),radial-gradient(circle at bottom,#f2612f 14%,transparent 14%),radial-gradient(circle at bottom,#f2612f 14%,transparent 14%);
+    background-size: 30% 100%;
+    background-position: 15% 0,64% 0,114% 0,15% 100%,35% 100%,85% 100%;
+}
