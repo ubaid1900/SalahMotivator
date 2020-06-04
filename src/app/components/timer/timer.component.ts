@@ -1,8 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Util } from '../util';
-import { interval, Subscription } from '../../../node_modules/rxjs';
-
-
+import { Subscription, interval } from 'rxjs';
+import { Util } from 'src/app/util';
 
 @Component({
   selector: 'app-timer',

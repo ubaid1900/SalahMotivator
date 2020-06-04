@@ -1,13 +1,9 @@
 import { Component, OnInit, OnChanges } from '@angular/core';
 import { TaskService } from '../services/task.service';
 import { ITask, Task } from '../models/task';
-import { NgbModal } from '../../../node_modules/@ng-bootstrap/ng-bootstrap';
 import { AddTaskComponent } from '../add-task/add-task.component';
 import { Phrase } from '../models/phrase';
-import { Util } from '../util';
-import { of, Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
-import { resolve } from 'q';
+import { Util } from 'src/app/util';
 
 declare var prayTimes: any;
 
@@ -58,7 +54,7 @@ export class TasksComponent implements OnInit, OnChanges {
           this.fetchTasks();
         }
       },
-      (reason) => { }
+      () => { }
     );
     console.log(modalref.result);
   }

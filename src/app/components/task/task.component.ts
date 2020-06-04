@@ -2,7 +2,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Task } from '../models/task';
 import { ConfirmationDialogService } from '../services/confirmation-dialog.service';
 import { TaskService } from '../services/task.service';
-import { Router, NavigationExtras } from '../../../node_modules/@angular/router';
+import { Router, NavigationExtras } from '@angular/router';
 
 @Component({
   selector: 'app-task',
@@ -13,8 +13,7 @@ export class TaskComponent implements OnInit {
   @Input() task: Task;
   @Output() deleted: EventEmitter<boolean> = new EventEmitter();
   showCarousel: boolean;
-  constructor(private taskService: TaskService, private confirmationDialogService: ConfirmationDialogService,
-    private router: Router) { }
+  constructor(private taskService: TaskService, private confirmationDialogService: ConfirmationDialogService) { }
 
   ngOnInit() {
   }

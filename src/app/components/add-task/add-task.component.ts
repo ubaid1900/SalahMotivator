@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { NgbActiveModal } from '../../../node_modules/@ng-bootstrap/ng-bootstrap';
 import { TaskService } from '../services/task.service';
 import { Task } from '../models/task';
-import { Form, FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
-import { Router } from '../../../node_modules/@angular/router';
-import { Util } from '../util';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { Util } from 'src/app/util';
 
 @Component({
   selector: 'app-add-task',

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, OnDestroy } from '@angular/core';
-import { interval, Observable, Subscription } from '../../../node_modules/rxjs';
+import { Subscription, interval } from 'rxjs';
 
 @Component({
   selector: 'app-clock',
