@@ -14,7 +14,7 @@
     <input type="checkbox" [checked]="task.done" (change)="mark($event, task);" />
   </div>
   <div>
-    <button *ngIf="task.deletable" class="material-icons" (click)="openConfirmationDialog(phrase)">delete</button>
+    <button *ngIf="task.deletable" class="material-icons" (click)="openConfirmationDialog()">delete</button>
   </div>
 </div>
 <div>

@@ -4,6 +4,7 @@ import { ITask, Task } from '../models/task';
 import { AddTaskComponent } from '../add-task/add-task.component';
 import { Phrase } from '../models/phrase';
 import { Util } from 'src/app/util';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 declare var prayTimes: any;
 

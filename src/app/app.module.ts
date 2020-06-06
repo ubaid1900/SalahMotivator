@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { TrialsComponent } from './components/trials/trials.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { PhraseComponent } from './components/phrase/phrase.component';
 import { ManagePhrasesComponent } from './components/manage-phrases/manage-phrases.component';
@@ -18,11 +17,11 @@ import { TimerComponent } from './components/timer/timer.component';
 import { TaskComponent } from './components/task/task.component';
 import { CssTrialsComponent } from './components/css-trials/css-trials.component';
 import { AlphabetCssComponent } from './components/alphabet-css/alphabet-css.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TrialsComponent,
     DashboardComponent,
     PhraseComponent,
     ManagePhrasesComponent,
@@ -41,7 +40,7 @@ import { AlphabetCssComponent } from './components/alphabet-css/alphabet-css.com
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule, NgbModule.forRoot()
+    ReactiveFormsModule, NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
