@@ -11,8 +11,8 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'managePhrases', component: ManagePhrasesComponent },
   { path: 'css', component: CssTrialsComponent },
-  { path: 'alphabets', loadChildren: './components/alphabet-css/alphabet-css.module#AlphabetCssComponent' }];
-  // { path: 'alphabets', component: AlphabetCssComponent }];
+  // { path: 'alphabets', loadChildren: './components/alphabet-css/alphabet-css.module#AlphabetCssComponent' }];
+  { path: 'alphabets', component: AlphabetCssComponent }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
