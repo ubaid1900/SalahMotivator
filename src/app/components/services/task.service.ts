@@ -13,7 +13,7 @@ export class TaskService {
     localStorage.setItem('tasks', JSON.stringify(tasks));
   }
   addTask(task: Task): any {
-    const tasks = this.getTasksFromStorage();
+    const tasks = this.getTasksFromStorage() || [];
     let nextId = Math.max(...tasks.map(t => t.id), 1);
     task.id = ++nextId;
     tasks.push(task);
