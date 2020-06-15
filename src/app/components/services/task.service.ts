@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Phrase } from '../models/phrase';
 import { Task } from '../models/task';
 import { Observable, of } from 'rxjs';
 
@@ -31,13 +30,6 @@ export class TaskService {
     return of(tasks);
   }
 
-  private addTime(d: Date, m: number): Date {
-    const nd = new Date(d.getTime() + 1000 * 60 * m);
-    return nd;
-  }
-  private getTimeFormatted(d: Date): string {
-    return d.getHours().toString() + ':' + d.getMinutes().toString().padStart(2, '0');
-  }
 
   getTitle() {
     const title: string = localStorage.getItem('title');
