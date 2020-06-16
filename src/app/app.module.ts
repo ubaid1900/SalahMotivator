@@ -1,3 +1,4 @@
+import { GoogleMapsModule } from '@angular/google-maps'
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -18,6 +19,7 @@ import { TaskComponent } from './components/task/task.component';
 import { CssTrialsComponent } from './components/css-trials/css-trials.component';
 import { AlphabetCssComponent } from './components/alphabet-css/alphabet-css.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { RecordPaymentComponent } from './modules/record-payment/record-payment.component';
 
 @NgModule({
   declarations: [
@@ -34,13 +36,15 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     TimerComponent,
     TaskComponent,
     CssTrialsComponent,
-    AlphabetCssComponent
+    AlphabetCssComponent,
+    RecordPaymentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule, NgbModule
+    ReactiveFormsModule,
+    NgbModule, GoogleMapsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
