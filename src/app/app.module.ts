@@ -19,7 +19,6 @@ import { TaskComponent } from './components/task/task.component';
 import { CssTrialsComponent } from './components/css-trials/css-trials.component';
 import { AlphabetCssComponent } from './components/alphabet-css/alphabet-css.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { RecordPaymentComponent } from './modules/record-payment/record-payment.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +36,6 @@ import { RecordPaymentComponent } from './modules/record-payment/record-payment.
     TaskComponent,
     CssTrialsComponent,
     AlphabetCssComponent,
-    RecordPaymentComponent
   ],
   imports: [
     BrowserModule,
