@@ -1,6 +1,7 @@
 import { GoogleMapsModule } from '@angular/google-maps'
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -42,7 +43,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    NgbModule, GoogleMapsModule
+    NgbModule, GoogleMapsModule, HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
