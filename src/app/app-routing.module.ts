@@ -10,12 +10,12 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'managePhrases', component: ManagePhrasesComponent },
   { path: 'css', component: CssTrialsComponent },
-  { path: 'alphabets', loadChildren: './components/alphabet-css/alphabet-css.module#AlphabetCssModule' }
-  // {
-  //   path: 'alphabets', loadChildren:
-  //     () => import('./components/alphabet-css/alphabet-css.module')
-  //       .then(m => m.AlphabetCssModule)
-  // }
+  // { path: 'alphabets', loadChildren: './components/alphabet-css/alphabet-css.module#AlphabetCssModule' }
+  {
+    path: 'alphabets', loadChildren:
+      () => import('./components/alphabet-css/alphabet-css.module')
+        .then(m => m.AlphabetCssModule)
+  }
 ];
 // { path: 'alphabets', component: AlphabetCssComponent }];
 
